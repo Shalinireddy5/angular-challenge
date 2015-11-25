@@ -14,8 +14,8 @@ For this exercise we'll use the following base cases:
 
 This is a simple test of basic CS fundamentals as well as basic Angular knowledge. The spec is as follows:
 
-- [ ] A single page that contains a button, as well as the current value of the sequence interpolated next to it, starting at 0.
-- [ ] When the button is clicked, we will update the view to display the next step of the sequence.
+- [X ] A single page that contains a button, as well as the current value of the sequence interpolated next to it, starting at 0.
+- [ X] When the button is clicked, we will update the view to display the next step of the sequence.
 
 ### For consideration:
 
@@ -23,6 +23,7 @@ This is a simple test of basic CS fundamentals as well as basic Angular knowledg
 - Performance is important here. Make sure to watch how frequently you're evaluating a `fib()` function such that you're only running it as needed.
 - Update the last README.md section with any thoughts or explanations you may have.
 - You can choose to use recursion or iteration for your implementation, but please let us know why you chose the one you did in the README.
+- 
 
 ### Extra Credit
 
@@ -32,3 +33,18 @@ This is a simple test of basic CS fundamentals as well as basic Angular knowledg
 
 ### Solution Discussion:
 - Your solution explanation goes here.
+- I choose to do both iteration and recursive methods to obtain Fibonacci sequence. For iteration we are summing the previous two sequence values, then pushing our values.  By this I mean that 'a' is dropped off and replaced by 'b' and 'b' is replaced with the current index value or sum of the sequence.
+- sum = b + z;
+  z = b;
+  b = sum;
+  $scope.outputI = $scope.outputI + " " + sum;
+- For recursion if a value is equal to 1 or 2 it will return 1, else as soon as n <= 0 then we just return a value of zero.  At the furthest breakdown, the sum of a values minus one or two will give the sum.
+- if (j == 1 || j == 2) {
+  return 1;
+  } else if (j <= 0) {
+  return 0;
+  }
+  return fibRecursive(j - 1) + fibRecursive(j - 2);
+Thanks!
+- 
+- 
